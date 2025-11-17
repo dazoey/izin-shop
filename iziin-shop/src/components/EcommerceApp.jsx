@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { Home, ShoppingCart, Package } from 'lucide-react';
+import { Home, ShoppingCart, Package, User } from 'lucide-react';
 
 import Header from './Header';
 import Footer from './Footer';
 import HomePage from '../pages/HomePage';
 import ProductsPage from '../pages/ProductsPage';
 import CartPage from '../pages/CartPage';
+import ProfilePage from '../pages/ProfilePage';
 
 export default function EcommerceApp() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -17,7 +18,8 @@ export default function EcommerceApp() {
   const navigation = [
     { id: 'home', label: 'Home', icon: Home },
     { id: 'products', label: 'Products', icon: Package },
-    { id: 'cart', label: 'Cart', icon: ShoppingCart, badge: cart.length }
+    { id: 'cart', label: 'Cart', icon: ShoppingCart, badge: cart.length },
+    { id: 'profile', label: 'Profile', icon: User }
   ];
 
   const handleNavigation = (page) => {
@@ -41,6 +43,8 @@ export default function EcommerceApp() {
         return <ProductsPage cart={cart} setCart={setCart} searchQuery={searchQuery} selectedCategory={selectedCategory} />;
       case 'cart':
         return <CartPage cart={cart} setCart={setCart} setCurrentPage={setCurrentPage} />;
+      case 'profile':
+        return <ProfilePage />;
       default:
         return <HomePage handleCategorySelect={handleCategorySelect} />;
     }

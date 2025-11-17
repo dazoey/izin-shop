@@ -5,12 +5,12 @@ export default function HomePage({ handleCategorySelect }) {
   const formatCurrency = (amount) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(amount);
 
   const categories = [
-    { name: 'Electronics', icon: '💻', color: 'green' },
-    { name: 'Fashion', icon: '👕', color: 'orange' },
-    { name: 'Home & Living', icon: '🏠', color: 'green' },
+    { name: 'Elektronik', icon: '💻', color: 'green' },
+    { name: 'pesyen', icon: '👕', color: 'orange' },
+    { name: 'Perabotan', icon: '🏠', color: 'green' },
     { name: 'Sports', icon: '⚽', color: 'orange' },
-    { name: 'Books', icon: '📚', color: 'green' },
-    { name: 'Toys', icon: '🧸', color: 'orange' }
+    { name: 'buku', icon: '📚', color: 'green' },
+    { name: 'mainan', icon: '🧸', color: 'orange' }
   ];
 
   const featuredProducts = [
