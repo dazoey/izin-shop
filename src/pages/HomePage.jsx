@@ -48,7 +48,7 @@ export default function HomePage({ handleCategorySelect }) {
       {/* Categories */}
       <section>
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-2xl font-bold text-gray-800">Belanja Sesuai Kategori</h3>
+          <h3 className="text-2xl font-bold text-gray-800">Berdasarkan Kategori</h3>
           <button 
             onClick={() => handleCategorySelect('')}
             className="text-green-500 hover:text-green-600 font-semibold text-sm transition"
